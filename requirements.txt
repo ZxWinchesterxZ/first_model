@@ -1,7 +1,6 @@
- tensorflow-cpu 
- nltk
- pandas
- numpy
- uvicorn
- fastapi
- gunicorn
+fastapi==0.75.2
+nltk==3.7
+numpy==1.22.3
+pandas==1.4.1
+tensorflow-cpu==2.8.0
+uvicorn==0.17.6
