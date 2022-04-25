@@ -1,3 +1,7 @@
-django
+tensorflow
+nltk
+uvicorn
 gunicorn
-django-heroku
+pandas
+numpy
+fastapi

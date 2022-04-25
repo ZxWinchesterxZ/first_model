@@ -1,6 +1,5 @@
 import tensorflow as tf
 import nltk
-import pickle
 import pandas as pd 
 import numpy as np
 from nltk.stem.porter import PorterStemmer
