@@ -7,8 +7,8 @@ stemmer = PorterStemmer()
 import uvicorn
 from fastapi import FastAPI
 
-dataset=pd.read_csv("Diseases_master.csv")
-diseases = dataset['name of symptoms-causes']
+diseases=pd.read_csv("Diseases_master.csv")
+diseases = diseases['name of symptoms-causes']
 label=[]
 phrases=[]
 for i in diseases:
@@ -81,12 +81,10 @@ for i in diseases:
 
 tags = sorted(set(label),key=label.index)
 all_words = []
-xy = []
 i = 0
 for pattern in phrases:
         w = nltk.word_tokenize(pattern)
         all_words.extend(w)
-        xy.append( (w, label[i]) )
         i=i+1
 
 def bag_of_words(tokenized_sentence, all_words):
