@@ -21,6 +21,7 @@ m = tf.keras.models.load_model('diseases.h5')
 label=[]
 f1 = open("labels.txt", "r")
 label = f1.read().splitlines()
+f1.close()
 label = sorted(set(label),key=label.index)
 app = FastAPI()
 @app.get('/')
