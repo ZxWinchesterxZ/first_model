@@ -108,7 +108,7 @@ m = tf.keras.models.load_model(r'D:\pyfiles\FastApi\disease_model\diseases.h5')
 app = FastAPI()
 @app.get('/')
 def index():
-    return {'message': 'Api For Models'}
+    return {'message': 'Welcome to Our Model'}
 # 3. Expose the prediction functionality, make a prediction from the passed
 #    JSON data and return the predicted Bank Note with the confidence
 @app.post('/predict_disease')
