@@ -7,7 +7,7 @@ stemmer = PorterStemmer()
 import uvicorn
 from fastapi import FastAPI
 
-dataset=pd.read_csv(r"D:\pyfiles\FastApi\disease_model\Diseases_master.csv")
+dataset=pd.read_csv("Diseases_master.csv")
 diseases = dataset['name of symptoms-causes']
 label=[]
 phrases=[]
@@ -103,7 +103,7 @@ ignore_words = ['?', '!', '.', ',']
 all_words = [stemmer.stem(w.lower()) for w in all_words if w not in ignore_words]
 all_words = sorted(set(all_words),key=all_words.index)
 
-m = tf.keras.models.load_model(r'D:\pyfiles\FastApi\disease_model\diseases.h5')
+m = tf.keras.models.load_model('diseases.h5')
 app = FastAPI()
 @app.get('/')
 def index():
