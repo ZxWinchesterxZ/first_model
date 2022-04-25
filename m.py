@@ -110,7 +110,7 @@ def index():
     return {'message': 'Welcome to Our Model'}
 # 3. Expose the prediction functionality, make a prediction from the passed
 #    JSON data and return the predicted Bank Note with the confidence
-@app.post('/predict_disease')
+@app.get('/predict_disease')
 def predict_disease(phrase:str):
     sentence = nltk.word_tokenize(phrase)
     X = bag_of_words(sentence, all_words)
