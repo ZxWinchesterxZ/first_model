@@ -4,4 +4,4 @@ nltk==3.7
 numpy==1.22.3
 gunicorn
 uvicorn
-tensorflow == 1.14
+tensorflow==1.14.0
