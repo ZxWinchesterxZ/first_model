@@ -22,6 +22,15 @@ f1 = open("labels.txt", "r")
 label = f1.read().splitlines()
 f1.close()
 label = sorted(set(label),key=label.index)
+
+sentence = " do you know Atrial fibrillation"
+sentence = word_tokenize(sentence)
+X = bag_of_words(sentence, all_words)
+X = X.reshape(1, X.shape[0])
+#X = torch.from_numpy(X)
+output = m.predict(X)
+print(label[argmax(output)])
+'''
 app = FastAPI()
 @app.get('/')
 def index():
@@ -36,5 +45,7 @@ def predict_disease(phrase:str):
     return {
         'prediction': label[argmax(output)]
     }
+'''
+
 
 
