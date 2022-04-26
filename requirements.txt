@@ -2,3 +2,4 @@ fastapi==0.75.2
 keras==2.8.0
 nltk==3.7
 numpy==1.22.3
+gunicorn
