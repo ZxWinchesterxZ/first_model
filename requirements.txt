@@ -3,5 +3,5 @@ nltk==3.7
 numpy==1.22.3
 gunicorn
 uvicorn
-https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.4.0-py3-none-any.whl
-keras==2.0.8
+https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.15.4-py3-none-any.whl
+keras==2.3.1
