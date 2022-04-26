@@ -1,7 +1,7 @@
-import tensorflow as tf
+import keras
 from nltk.stem.porter import PorterStemmer
 from fastapi import FastAPI
-import numpy as np
+from numpy import argmax
 from nltk import word_tokenize
 all_words = []
 label=[]
@@ -17,7 +17,7 @@ def bag_of_words(tokenized_sentence, all_words):
             bag[idx] = 1.0
 
     return bag
-m = tf.keras.models.load_model('diseases.h5')
+m = keras.models.load_model('diseases.h5')
 f1 = open("labels.txt", "r")
 label = f1.read().splitlines()
 f1.close()
@@ -34,7 +34,7 @@ def predict_disease(phrase:str):
     X = X.reshape(1, X.shape[0])
     output = m.predict(X)
     return {
-        'prediction': label[np.argmax(output)]
+        'prediction': label[argmax(output)]
     }
 
 
