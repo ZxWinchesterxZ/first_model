@@ -1,4 +1,4 @@
-import keras
+from tensorflow import keras
 from nltk.stem.porter import PorterStemmer
 from fastapi import FastAPI
 from numpy import argmax , zeros,float32
